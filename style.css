@@ -1,0 +1,327 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+:root{
+  --regular-font:400;
+  --bold-font:700;
+  --extra-bold:800;
+
+  --p-clr: hsl(236, 13%, 42%);
+}
+
+
+body{
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.main_container{
+  padding: 0 1.5rem;
+  z-index: 100;
+}
+
+.main_container main{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header{
+padding: 2rem 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+}
+
+.header .logo{
+width: 2.8rem;
+}
+
+.header .nav-links{
+  display: none;
+}
+
+.header #menu_icon{
+  cursor: pointer;
+}
+ .nav_open{
+  display: none;
+}
+ 
+.menu{
+  position: absolute;
+  right: 0;
+}
+ 
+
+.show_navbar{
+  width:75%;
+  height: 100vh;
+  background-color: lightblue;
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  transition: all .3s ease-in;
+}
+
+.usetrans_black{
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color:rgba(0,0,0,.6);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.show_navbar img{
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.show_navbar ul{
+  list-style: none;
+  font-size: 1.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.show_navbar ul li{
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.show_navbar ul li:hover{
+  color: hsl(325, 81%, 11%);
+  transition: all .3s ease;
+}
+
+
+.header .nav-links li{
+  cursor: pointer;
+}
+
+.description{
+  margin-top: 1.25rem;
+  display: grid;
+}
+
+.description h1{
+  font-size: 2.5rem;
+  font-weight:800;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.description p{
+  line-height: 1.75;
+  color:var(--p-clr);
+  margin-bottom: 1.5rem;
+}
+
+.description button{
+  background: hsl(5, 85%, 63%);
+  border: none;
+  outline: none;
+  padding: .8rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: rgba(255,255,255,.8);
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.description button:hover{
+  background-color:  hsl(240, 100%, 5%);
+}
+
+.container_2 {
+  background: hsl(240, 100%, 5%);
+  padding: 0 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: .25rem;
+  color: white;
+}
+
+.container_2 .dark_bg h1{
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.container_2 .dark_bg article:not(:last-child){
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+
+.container_2 .dark_bg article h4{
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 1.75rem;
+  margin-bottom: .25rem;
+  transition: all .3s ease-in-out;
+}
+
+.container_2 .dark_bg article h4:hover{
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.container_2 .dark_bg article p{
+  color: var(--p-clr);
+  margin-bottom: 1.75rem;
+  line-height: 1.8;
+}
+
+
+
+.container_3{
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.container_3 .con-1{
+  display: grid;
+  grid-template-columns: 6.25rem 1fr;
+  gap: 1.5rem;
+}
+
+
+.container_3 .con-1 h2{
+  font-size: 2rem;
+  color:  hsl(233, 8%, 79%);
+  margin-top: -5px;
+}
+
+.container_3 .con-1 h4{
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: .5rem;
+}
+
+.container_3 .con-1 p{
+  color: var(--p-clr);
+  line-height: 1.8;
+}
+
+
+/* Media queries */
+
+
+@media(min-width:600px){
+  .container_3{
+    grid-template-columns: repeat(2,1fr);
+    margin: 4rem 0;
+  }
+  .description{
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.description div p{
+  margin-top: .25rem;
+}
+.header .nav-links{
+ gap: 2.5rem;
+ color: var(--p-clr);
+ display: flex;
+ font-weight: 500;
+ align-content: flex-end;
+}
+.header #menu_icon{
+  display: none;
+}
+}
+
+@media (min-width: 1024px) {
+
+  .main_container main{
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+   }
+   .description{
+     grid-template-columns: 1fr 1fr;
+     gap: 1rem;
+ }
+ .description div p{
+   margin-top: 1rem;
+ }
+ 
+ .description h1{
+   font-size: 3rem;
+ }
+ .header .logo{
+   width: 4rem;
+ }
+ .container_3{
+   grid-template-columns: repeat(3,1fr);
+   margin: 4rem 0;
+ }
+ 
+.header #menu_icon{
+  display: none;
+}
+ }

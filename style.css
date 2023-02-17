@@ -268,6 +268,11 @@ width: 2.8rem;
   line-height: 1.8;
 }
 
+.attribution {
+  padding: 1rem;
+  line-height: 1.5;
+}
+
 
 /* Media queries */
 

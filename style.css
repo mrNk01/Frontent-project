@@ -153,7 +153,7 @@ width: 2.8rem;
   cursor: pointer;
 }
 
-.show_navbar ul li:hover{
+ul li:hover{
   color: hsl(325, 81%, 11%);
   transition: all .3s ease;
 }
